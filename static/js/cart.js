@@ -11,7 +11,7 @@ for (i = 0; i < updateBtns.length; i++) {
 			console.log('User is not authenticated')
 			
 		}else{
-			console.log('User is authenticated, sending data...')
+			updateUserOrder(productId, action)
 		}
 
 	})
@@ -35,5 +35,6 @@ function updateUserOrder(productId, action){
 		})
 		.then((data) => {
 		    console.log('Data:', data)
+			location.reload()
 		});
 }
